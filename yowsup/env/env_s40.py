@@ -12,6 +12,7 @@ else:
 
 class S40YowsupEnv(YowsupEnv):
     try:
+        raise Exception()
         url = 'https://coderus.openrepos.net/whitesoft/whatsapp_scratch'
         response = urlopen(url)
         x = ast.literal_eval(response.read().decode())
