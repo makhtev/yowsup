@@ -11,18 +11,12 @@ else:
 
 
 class S40YowsupEnv(YowsupEnv):
-    try:
-        url = 'https://coderus.openrepos.net/whitesoft/whatsapp_scratch'
-        response = urlopen(url)
-        x = ast.literal_eval(response.read().decode())
-        (_VERSION, _TOKEN_STRING) = (x['e'], x['b']+(''.join(c for c in x['c'] if c.isdigit()))+'{phone}')
-    except:
-        _VERSION = "2.16.11"
-        _TOKEN_STRING  = "PdA2DJyKoUrwLw1Bg6EIhzh502dF9noR9uFCllGk1478194306452{phone}"
+    _VERSION = "2.16.11"
     _OS_NAME= "S40"
     _OS_VERSION = "14.26"
     _DEVICE_NAME = "302"
     _MANUFACTURER = "Nokia"
+    _TOKEN_STRING  = "PdA2DJyKoUrwLw1Bg6EIhzh502dF9noR9uFCllGk1478194306452{phone}"
     _AXOLOTL = True
 
     def getVersion(self):
